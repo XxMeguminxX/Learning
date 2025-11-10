@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'guard' => 'web',
+    'guard' => 'web', // Keep web for Sanctum SPA authentication
 
     /*
     |--------------------------------------------------------------------------
@@ -130,7 +130,7 @@ return [
     |
     */
 
-    'views' => true,
+    'views' => false, // Disable views for API-only usage
 
     /*
     |--------------------------------------------------------------------------

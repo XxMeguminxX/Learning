@@ -20,7 +20,12 @@ return Application::configure(basePath: dirname(__DIR__))
             'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         ]);
 
-        //
+        // Exclude auth routes from Sanctum middleware to prevent 302 redirect
+        $middleware->api(except: [
+            'register',
+            'login',
+        ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

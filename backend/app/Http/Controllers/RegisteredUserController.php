@@ -26,8 +26,8 @@ class RegisteredUserController extends Controller
         Auth::login($user); // login session-based (SPA)
 
         return response()->json([
-            'message' => 'Registered',
-            'user' => $user,
-        ]);
+            'message' => 'User Registered Successfully',
+            'status' => 'success',
+        ], status: 201);
     }
 }
